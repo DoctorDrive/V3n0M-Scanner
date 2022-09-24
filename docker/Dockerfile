@@ -42,7 +42,7 @@ COPY $WORKDIR/pyproject.toml .
 RUN chown $USER:$USER --recursive ./$WORKDIR
 
 # Magic
-WORKDIR $WORKDIR
+WORKDIR ./$WORKDIR
 RUN poetry install
 
 # Use pip for the rest
